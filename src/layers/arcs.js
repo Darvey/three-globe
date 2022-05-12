@@ -160,7 +160,8 @@ export default Kapsule({
       },
       updateObj: (group, arc) => {
         const stroke = strokeAccessor(arc);
-        const useTube = stroke !== null && stroke !== undefined;
+        const useTube = true;
+        // const useTube = stroke !== null && stroke !== undefined;
 
         if (!group.children.length || useTube !== (group.children[0].type === 'Mesh')) {
           // create or swap object types
@@ -171,6 +172,7 @@ export default Kapsule({
             : new THREE.Line(new THREE.BufferGeometry());
 
           obj.material = sharedMaterial.clone(); // Separate material instance per object to have dedicated uniforms (but shared shaders)
+          console.log(obj.isLine());
 
           group.add(obj);
         }
