@@ -97,7 +97,7 @@ export default Kapsule({
     arcStartLng: { default: 'startLng' },
     arcEndLat: { default: 'endLat' },
     arcEndLng: { default: 'endLng' },
-    arcColor: { default: () => '#32FF12' }, // single color, array of colors or color interpolation fn
+    arcColor: { default: () => '#122299' }, // single color, array of colors or color interpolation fn
     arcAltitude: {}, // in units of globe radius
     arcAltitudeAutoScale: { default: 0.5 }, // scale altitude proportional to great-arc distance between the two points
     arcStroke: {}, // in deg
